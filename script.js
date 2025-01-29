@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isPlaying = false;
   let mediaElement = null;
 
-  // Render artwork cards
+
   artworkPatterns.forEach((pattern) => {
     const card = document.createElement("div");
     card.className = "artwork-card";
@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     artworkGrid.appendChild(card);
   });
 
-  // Song lists data
   const topCharts = [
     {
       title: "See You Again",
@@ -120,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  // Update the renderSongList function
   function renderSongList(songs, containerId) {
     const container = document.getElementById(containerId);
     songs.forEach((song) => {
@@ -138,11 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Make sure to call the updated renderSongList function
   renderSongList(topCharts, "top-charts");
   renderSongList(listenAgain, "listen-again");
 
-  // Friend and singer avatar images
   const friendImages = [
     "https://w7.pngwing.com/pngs/7/618/png-transparent-man-illustration-avatar-icon-fashion-men-avatar-face-fashion-girl-heroes-thumbnail.png",
     "https://w7.pngwing.com/pngs/7/618/png-transparent-man-illustration-avatar-icon-fashion-men-avatar-face-fashion-girl-heroes-thumbnail.png",
@@ -161,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "https://w7.pngwing.com/pngs/7/618/png-transparent-man-illustration-avatar-icon-fashion-men-avatar-face-fashion-girl-heroes-thumbnail.png",
   ];
 
-  // Render avatars
   function renderAvatars(containerId, images) {
     const container = document.getElementById(containerId);
     images.forEach((imageUrl) => {
@@ -178,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAvatars("friends", friendImages);
   renderAvatars("singers", singerImages);
 
-  // Player functionality
   function updateMediaInfo(file) {
     songTitle.textContent = file.name;
     artistName.textContent = "Local File";
